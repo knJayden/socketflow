@@ -1,13 +1,13 @@
 <script lang="ts">
 
 export default {
-  name: 'HomeView'
+  name: 'WebSocketConsole'
 }
 
 </script>
 
 <template>
-  <main>
-    Hello!
-  </main>
+
+    Websocks
+
 </template>
