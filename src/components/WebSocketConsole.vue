@@ -1,7 +1,14 @@
 <script lang="ts">
 
+import { useEventStore } from '../stores/eventLog'
+
 export default {
-  name: 'WebSocketConsole'
+    setup() {
+        const eventStore = useEventStore()
+
+        return { eventStore }
+    },
+    name: 'WebSocketConsole'
 }
 
 </script>
@@ -9,5 +16,6 @@ export default {
 <template>
 
     Websocks
+    {{ eventStore.events }}
 
 </template>
