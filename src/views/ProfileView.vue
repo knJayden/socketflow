@@ -2,11 +2,18 @@
 
 import WebSocketConsole from '../components/WebSocketConsole.vue';
 
+import { useWsStore } from '../stores/websocket'
+
 export default {
-  name: 'ProfileView',
-  components: {
-    WebSocketConsole
-  }
+    setup() {
+        const wsStore = useWsStore()
+
+        return { wsStore }
+    },
+    name: 'ProfileView',
+    components: {
+        WebSocketConsole
+    }
 }
 
 </script>
